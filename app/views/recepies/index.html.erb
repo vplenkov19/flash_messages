@@ -1,2 +1,8 @@
-<h1>Hello there</h1>
-<h2>General Kenobi</h2>
+<div class='container'>
+  <div class='header-container'>
+    <h3 class='app-title'>Add your recepies here</h2>
+    <button type="button" data-toggle="modal" data-target="#new-recepie-modal" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span></button>
+  </div>
+  <div class='divider'></div>
+  <%= render partial: 'partials/new_recepie_modal' %>
+</div>

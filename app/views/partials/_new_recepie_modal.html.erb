@@ -1,0 +1,27 @@
+<div class="modal" id="new-recepie-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <%= form_for Recepie.new, remote: true do |f| %>
+        <div class="modal-header">
+          <h3 class="modal-title">Add new recepie</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <%= f.text_field :name, class: 'form-control', placeholder: "Name"  %>
+          </div>
+          <div class='divider-sm'></div>
+          <div class="input-group mb-3">
+            <%= f.text_field :description, class: 'form-control', placeholder: "Description"  %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
