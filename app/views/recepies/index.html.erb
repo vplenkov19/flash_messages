@@ -3,6 +3,19 @@
     <h3 class='app-title'>Add your recepies here</h2>
     <button type="button" data-toggle="modal" data-target="#new-recepie-modal" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span></button>
   </div>
-  <div class='divider'></div>
+  <div class='divider-sm'></div>
   <%= render partial: 'partials/new_recepie_modal' %>
+  <table class='table'>
+    <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody id='recepies-data'>
+      <%= render partial: 'partials/recepies_table', locals: { recepies: @recepies } %>
+    </tbody>
+  </table>
 </div>
