@@ -1,3 +1,30 @@
 // Place all the styles related to the Recepies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .app-title {
+      padding: 16px;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+  }
+
+  .divider-sm {
+    border: 1px solid #ccc;
+    margin: 16px 0;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
