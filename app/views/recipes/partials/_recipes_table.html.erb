@@ -1,0 +1,14 @@
+<% recipes.each do |recipe| %>
+  <tr>
+    <td><%= recipe.id %></td>
+    <td><%= recipe.name %></td>
+    <td><%= recipe.description %></td>
+    <td>
+      <%= link_to recipe, class: "notification-messages dynamic-form", remote: true, method: :delete, data: { container: 'recipes-container' } do %>
+        <button class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-trash"></span> Remove
+        </button>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

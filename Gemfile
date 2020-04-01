@@ -27,6 +27,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+#jQuery UI for the Rails asset pipeline. Read more: https://github.com/jquery-ui-rails/jquery-ui-rails
+gem 'jquery-ui-rails'
+
 gem 'bootstrap'
 
 # Use ActiveStorage variant
