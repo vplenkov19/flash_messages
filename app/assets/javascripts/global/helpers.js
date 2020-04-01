@@ -1,24 +1,13 @@
 __App = {};
 
 __App._Helpers = {
-  appendContent: (_container, _content) => {
+  appendContent: function(_container, _content) {
     if(_container) {
         _container.html(_content);
     }
-
   },
 
-  showMessage: function(data) {
-    $container = $('.notification_container')
-    $container.addClass(data.messageClass);
-    $container.addClass('show');
-    $container.html(data.message);
-
-    setTimeout(() => {
-      closeMessage($container)
-    }, 5000);
-  },
-  removeModal: (_modal) => {
+  removeModal: function(_modal) {
     if (_modal) {
         _modal.removeClass("in")
             .off('click.dismiss.bs.modal')
@@ -30,8 +19,4 @@ __App._Helpers = {
         _modal.hide();
     }
   },
-
-  closeMessage: function ($target) {
-    $target.removeClass('show isa_error isa_warning isa_success');
-  }
 }
