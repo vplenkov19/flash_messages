@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
       if recipe.save
         @recipes = Recipe.all
         html_content = render_to_string partial: '/recipes/partials/recipes_table', locals: { recipes: @recipes }
-        format.json { render json: { message: 'recipe have been successfully created.', messageClass: 'isa_success', html_content: html_content } }
+        format.json { render json: { message: 'Recipe have been successfully created.', messageClass: 'isa_success', html_content: html_content } }
       else
         error = ''
         recipe.errors.full_messages.each { |e| error += e.to_s + "\n" }
@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
       if @recipe.destroy
         @recipes = Recipe.all
         html_content = render_to_string partial: '/recipes/partials/recipes_table', locals: { recipes: @recipes }
-        format.json { render json: { message: 'recipe have been successfully deleted.', messageClass: 'isa_warning', html_content: html_content } }
+        format.json { render json: { message: 'Recipe have been successfully deleted.', messageClass: 'isa_warning', html_content: html_content } }
       else
         error = ''
         @recipe.errors.full_messages.each { |e| error += e.to_s + "\n" }

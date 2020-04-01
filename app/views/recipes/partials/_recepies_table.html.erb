@@ -1,0 +1,10 @@
+<% recepies.each do |recepie| %>
+  <tr>
+    <td><%= recepie.id %></td>
+    <td><%= recepie.name %></td>
+    <td><%= recepie.description %></td>
+    <td><button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-trash"></span> Trash
+        </button></td>
+  </tr>
+<% end %>

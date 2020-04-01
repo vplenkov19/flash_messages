@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require activestorage
+//= require base
 //= require global/helpers
 //= require global/messages
 //= require_tree .
