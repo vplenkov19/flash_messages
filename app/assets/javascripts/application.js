@@ -12,8 +12,7 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+//= require base
 //= require global/helpers
-//= require global/modal
 //= require global/messages
 //= require_tree .

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RecepiesController < ApplicationController
   before_action :set_recepie, only: [:destroy]
   def index
@@ -8,25 +10,24 @@ class RecepiesController < ApplicationController
     recepie = Recepie.new(recepies_params)
     respond_to do |format|
       if recepie.save
-        format.json { json: { message: 'Recepie have been successfully created.', messageClass: 'isa_success'}  }
+        format.json { render json: { message: 'Recepie have been successfully created.', messageClass: 'isa_success' } }
       else
-        error = ""
+        error = ''
         recepie.errors.full_messages.each { |e| error += e.to_s + "\n" }
-        format.json { render json: {message: error , messageClass: "isa_error"} }
+        format.json { render json: { message: error, messageClass: 'isa_error' } }
       end
     end
   end
 
   def destroy
     if @recepie.destroy
-      format.json { json: { message: 'Recepie have been successfully deleted.', messageClass: 'isa_warning'}  }
+      format.json { render json: { message: 'Recepie have been successfully deleted.', messageClass: 'isa_warning' } }
     else
-      error = ""
+      error = ''
       @recepie.errors.full_messages.each { |e| error += e.to_s + "\n" }
-      format.json { render json: {message: error , messageClass: "isa_error"} }
+      format.json { render json: { message: error, messageClass: 'isa_error' } }
     end
   end
-
 
   private
 
