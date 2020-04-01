@@ -1,0 +1,36 @@
+@import "shared/variables";
+
+.notification_container {
+  display: none;
+  width: 300px;
+  border-radius: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 8px 16px 8px 0;
+  padding: 16px;
+  z-index: $z-level-7;
+  font-size: $font-size-3;
+  cursor: pointer;
+
+  &.isa_info {
+    color: $user-info;
+    background-color: $background-info;
+  }
+  &.isa_success {
+    color: $user-success;
+    background-color: $background-success;
+  }
+  &.isa_warning {
+    color: $user-warning;
+    background-color: $background-warning;
+  }
+  &.isa_error {
+    color: $user-white;
+    background-color: $background-red-error;
+  }
+
+  &.show {
+    display: flex;
+  }
+}

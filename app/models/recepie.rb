@@ -1,2 +1,0 @@
-class Recepie < ApplicationRecord
-end
