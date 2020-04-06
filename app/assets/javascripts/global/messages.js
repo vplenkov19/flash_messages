@@ -1,10 +1,9 @@
 // if the ajax request from form or link was successful, then replace html content
 $(document).on('ajax:success', '.dynamic-form', function(e, data) {
-  $target = $(e.target);
+  const $target = $(e.target);
   const $modal = $target.closest('.modal');
+  const $targetContainer = $(`#${$target.data('container')}`);
   __App._Helpers.removeModal($modal);
-
-  const $targetContainer = $(`#${$target.attr('data-container')}`);
 
   appendContent($targetContainer, data.html_content)
 });
@@ -28,16 +27,15 @@ function appendContent(_container, _content) {
   if(_container) {
       _container.html(_content);
   }
-
 }
 
-function showMessage(data) {
-  $container = $('.notification_container')
-  $container.addClass(data.messageClass);
+function showMessage(_data) {
+  const $container = $('.notification_container')
+  $container.addClass(_data.messageClass);
   $container.addClass('show');
-  $container.html(data.message);
+  $container.html(_data.message);
 }
 
-function closeMessage($target) {
-  $target.removeClass('show isa_error isa_warning isa_success');
+function closeMessage(_target) {
+  _target.removeClass('show isa_error isa_warning isa_success');
 }
