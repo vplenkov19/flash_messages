@@ -14,7 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'pg'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
+gem 'mini_racer', platforms: :ruby
+
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -22,6 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -32,6 +35,10 @@ gem 'jquery-rails'
 
 #jQuery UI for the Rails asset pipeline. Read more: https://github.com/jquery-ui-rails/jquery-ui-rails
 gem 'jquery-ui-rails'
+
+gem 'execjs'
+gem 'mini_racer', platforms: :ruby
+
 
 gem 'bootstrap'
 

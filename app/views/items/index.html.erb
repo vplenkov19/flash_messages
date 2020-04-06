@@ -1,0 +1,21 @@
+<div class='container'>
+  <div class='header-container'>
+    <h3 class='app-title'>Add your items here</h2>
+    <button type="button" data-toggle="modal" data-target="#new-item-modal" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span></button>
+  </div>
+  <div class='divider-sm'></div>
+  <%= render partial: 'items/partials/new_item_modal' %>
+  <table class='table'>
+    <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody id='items-container'>
+      <%= render partial: 'items/partials/items_table', locals: { items: @items } %>
+    </tbody>
+  </table>
+</div>

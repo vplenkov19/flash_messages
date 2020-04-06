@@ -1,0 +1,14 @@
+<% items.each do |item| %>
+  <tr>
+    <td><%= item.id %></td>
+    <td><%= item.name %></td>
+    <td><%= item.description %></td>
+    <td>
+      <%= link_to item, class: "notification-messages dynamic-form", remote: true, method: :delete, data: { container: 'items-container' } do %>
+        <button class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

@@ -1,9 +1,9 @@
-<div class="modal" id="new-recipe-modal" tabindex="-1" role="dialog">
+<div class="modal" id="new-item-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <%= form_for Recipe.new, remote: true, html: { class: 'dynamic-form notification-messages' }, data: { container: 'recipes-container'} do |f| %>
+      <%= form_for Item.new, remote: true, html: { class: 'dynamic-form notification-messages' }, data: { container: 'items-container'} do |f| %>
         <div class="modal-header">
-          <h3 class="modal-title">Add new recipe</h5>
+          <h3 class="modal-title">Add new item</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
