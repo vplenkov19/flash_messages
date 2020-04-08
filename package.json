@@ -1,6 +1,10 @@
 {
   "name": "flash_messages",
   "private": true,
+  "engines": {
+    "node": "13.x.x",
+    "yarn": ">=1.x.x"
+  },
   "dependencies": {
     "@rails/webpacker": "4.2.2",
     "jquery": "^3.4.1",
