@@ -12,8 +12,6 @@ gem 'puma', '~> 3.11'
 gem 'webpacker', '~> 4.x'
 
 gem 'pg'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'mini_racer', platforms: :ruby
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
@@ -30,10 +28,6 @@ gem 'jquery-rails'
 
 #jQuery UI for the Rails asset pipeline. Read more: https://github.com/jquery-ui-rails/jquery-ui-rails
 gem 'jquery-ui-rails'
-
-gem 'execjs'
-gem 'mini_racer', platforms: :ruby
-
 
 gem 'bootstrap'
 
