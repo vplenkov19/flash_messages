@@ -7,10 +7,9 @@ ruby '2.5.7'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+
+#Use Webpack to manage app-like JavaScript modules in Rails
+gem 'webpacker', '~> 4.x'
 
 gem 'pg'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -18,10 +17,6 @@ gem 'mini_racer', platforms: :ruby
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
@@ -41,6 +36,8 @@ gem 'mini_racer', platforms: :ruby
 
 
 gem 'bootstrap'
+
+gem 'foreman'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
