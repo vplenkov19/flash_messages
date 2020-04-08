@@ -1,2 +1,2 @@
-import "base.scss"
-import 'recepies.scss'
+import "./base.scss"
+import './items.scss'
