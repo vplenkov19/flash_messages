@@ -1,2 +1,1 @@
-web: bin/rails s -p $PORT
-webpack: bin/webpack
+web: bin/webpack &  bin/rails s -p $PORT
