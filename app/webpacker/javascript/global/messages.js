@@ -1,5 +1,6 @@
 // if the ajax request from form or link was successful, then replace html content
-$(document).on('ajax:success', '.dynamic-form', function(e, data) {
+$(document).on('ajax:success', '.dynamic-form', function(e) {
+  const data = e.originalEvent.detail[0];
   const $target = $(e.target);
   const $modal = $target.closest('.modal');
   const $targetContainer = $(`#${$target.data('container')}`);
@@ -9,14 +10,10 @@ $(document).on('ajax:success', '.dynamic-form', function(e, data) {
 });
 
 // show the message when the the ajax request returned success
-$(document).on('ajax:success', '.notification-messages', function(e, data) {
+$(document).on('ajax:success ajax:error', '.notification-messages', function(e) {
+  const data = e.originalEvent.detail[0];
   showMessage(data)
 });
-
-// show the message when the the ajax request returned failure
-$(document).on('ajax:error', '.notification-messages', function(e, xhr, set, error) {
-  showMessage(xhr.responseJSON);
-})
 
 // close the notification container when the user clicks on it
 $(document).on('click', '.notification_container', function(event) {

@@ -3,43 +3,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.7'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
-# Use Puma as the app server
+gem 'rails', "~> 6.0.0"
+
 gem 'puma', '~> 3.11'
 
-#Use Webpack to manage app-like JavaScript modules in Rails
 gem 'webpacker', '~> 4.x'
 
 gem 'pg'
 
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
-#jQuery UI for the Rails asset pipeline. Read more: https://github.com/jquery-ui-rails/jquery-ui-rails
-gem 'jquery-ui-rails'
-
-gem 'bootstrap'
+gem 'bootstrap',  '~>4.3.1'
 
 gem 'foreman'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
