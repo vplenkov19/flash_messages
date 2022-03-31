@@ -5,7 +5,7 @@ ruby '2.5.7'
 
 gem 'rails', "~> 6.0.0"
 
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 
 gem 'webpacker', '~> 4.x'
 
